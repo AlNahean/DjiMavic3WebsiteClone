@@ -1,0 +1,49 @@
+.section-2 {
+  max-width: 100vw;
+  overflow-x: hidden;
+  //   max-height: 100vh;
+
+  .section-2-container {
+    width: 100%;
+    height: 100vh;
+    // margin-top: var(--header-height);
+    // margin-bottom: var(--header-height);
+    // height: calc(100vh - (var(--header-height) * 2));
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr 3fr 1fr;
+    justify-content: baseline;
+    align-items: center;
+    grid-gap: 1rem;
+
+    & > div {
+      height: 100%;
+      width: 100%;
+      //   background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section2-text {
+      text-align: center;
+      max-width: 800px;
+      font-size: calc(0.8rem + 1vw);
+    }
+
+    .drone-overview {
+      height: 60vh;
+      width: 100%;
+      max-width: 1000px;
+      //   aspect-ratio: 14/9;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .section-2-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 5fr 3fr 2fr;
+    }
+  }
+}

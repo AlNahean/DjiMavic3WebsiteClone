@@ -1,0 +1,16 @@
+.section-7 {
+  max-width: 100vw;
+  overflow-x: hidden;
+  .section-7-wraper {
+    padding-top: var(--header-height);
+    .drone-camera-main {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .camera-image-container {
+    height: 60vh;
+    position: relative;
+    width: 100%;
+  }
+}

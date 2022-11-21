@@ -1,0 +1,75 @@
+.dashboard-e-wallet .currency-icon {
+  height: 55px;
+  width: 55px;
+  border-radius: 10px;
+
+  color: var(--ct-icon-color);
+  background-color: var(--ct-icon-bg);
+}
+.dashboard-e-wallet .currency-icon > * {
+  height: 2.2rem;
+  width: auto;
+}
+
+// **************************************************************************
+// ********************** WishList Icon ****************************************************
+// **************************************************************************
+.dashboard-e-wallet .watchlist-icon {
+  //   border-style: "solid";
+  //   border-radius: "50%";
+  //   height: 55px;
+  //   width: 55px;
+  //   border-radius: 10px;
+  //   border: 1px solid red;
+
+  //   color: var(--ct-icon-color);
+  //   background-color: rgba(var(--bs-danger), 0.5) !important;
+  //   background-color: rgba(var(--bs-danger-rgb), 0.3) !important;
+}
+.dashboard-e-wallet .watchlist-icon > * {
+  height: 2.2rem;
+  width: auto;
+}
+.ct-border-danger-fill {
+  //   color: ;
+}
+.bg-danger-lighten {
+  background-color: rgba(var(--bs-danger-rgb), 0.3);
+}
+.bg-warning-lighten {
+  background-color: rgba(var(--bs-warning-rgb), 0.3);
+}
+.bg-success-lighten {
+  background-color: rgba(var(--bs-success-rgb), 0.3);
+}
+.bg-info-lighten {
+  background-color: rgba(var(--bs-info-rgb), 0.3);
+}
+//**********************************************************************
+//***********************Wallet widget********************************
+//**********************************************************************
+
+.wallet-widget-size {
+  // max-height: 100px;
+  height: 60px;
+  width: 100px;
+}
+
+@media screen and (max-width: 576px) {
+  .wallet-widget-size {
+    max-height: 100px;
+    height: 60px;
+    width: 100%;
+  }
+}
+// .wallet-widget-size > canvas {
+//   height: 40px !important;
+// }
+.box-h {
+  background-color: var(--ct-body-sc-bg-2) !important;
+  transform: translateX(20%);
+}
+.ct-hover:hover {
+  background-color: var(--ct-body-sc-bg) !important;
+  // background-color: red !important;
+}

@@ -1,0 +1,45 @@
+.proxy-header {
+  height: var(--header-height);
+}
+
+.header-container {
+  height: var(--header-height);
+  background-color: var(--my-header-bg);
+  color: var(--my-color) !important;
+
+  .reacticon-icon {
+    color: var(--my-color);
+    & > svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+.nav-section {
+  gap: 1rem;
+}
+
+.menu-nav-full {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transform: translateY(100%);
+  background-color: var(--my-header-bg);
+  & > div {
+    padding-bottom: 2rem;
+  }
+  .nav-item {
+    padding: 1rem 2rem;
+
+    // background-color: red;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--my-header-bg-sc);
+    }
+  }
+  .nav-item-btn {
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+}

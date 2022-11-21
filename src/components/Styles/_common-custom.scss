@@ -1,0 +1,46 @@
+// *****************************************************************************************
+// *****************************Scroll Bar******************************************
+// *****************************************************************************************
+.custom-scrollbar::-webkit-scrollbar {
+  width: 15px;
+}
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f17a;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  //   background: rgba(136, 136, 136, 0.514);
+  background: #555;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+// ******************************************************************
+// ****************************Small**************************************
+// ******************************************************************
+.custom-scrollbar-sm::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+.custom-scrollbar-sm::-webkit-scrollbar-track {
+  background: #f1f1f17a;
+}
+
+/* Handle */
+.custom-scrollbar-sm::-webkit-scrollbar-thumb {
+  //   background: rgba(136, 136, 136, 0.514);
+  background: #555;
+}
+
+/* Handle on hover */
+.custom-scrollbar-sm::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+// *****************************************************************************************
+// *****************************Body******************************************
+// *****************************************************************************************
+// @import "../Page/Home/Styles/react-calender";

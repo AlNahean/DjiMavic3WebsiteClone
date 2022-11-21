@@ -1,0 +1,19 @@
+.section-1 {
+  .content {
+    position: absolute;
+    top: -calc(var(--header-height));
+    // background-color: red;
+    height: calc(100vh);
+    width: 100%;
+    left: 0px;
+  }
+  .section-1-marker {
+    min-height: 100vh;
+    z-index: 1;
+  }
+  .highZindex {
+    z-index: 1000 !important;
+    // position: fixed;
+    background-color: aqua !important;
+  }
+}

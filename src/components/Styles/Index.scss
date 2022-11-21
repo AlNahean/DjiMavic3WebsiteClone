@@ -1,0 +1,57 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+@import "./rootVariables";
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  color: var(--my-color) !important;
+  background-color: var(--my-bg-color) !important;
+}
+@font-face {
+  font-family: DJIAtomIconSolid;
+  src: url("../../../public/dji-official/assets/uploads/p/9df2e324-f733-4c94-8ee8-dd633a87021b/atom/DJIAtomIconSolid/iconfont.woff");
+}
+/*
+=============== 
+Bootstrap
+===============
+*/
+// @import url("../../../node_modules/bootstrap/dist/css/bootstrap.css");
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  font-family: DJIAtomIconSolid, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  color: var(--my-color) !important;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+.na {
+  background-color: var(--my-color);
+}
+
+@import "./commonCustom";
+@import "./custom";

@@ -1,0 +1,32 @@
+.section-1-camera-wrapper {
+  position: relative;
+  #hero-lightpass {
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    //   position: fixed;
+    //   top: 0px;
+  }
+
+  .camera-webp-title-wrapper {
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .camera-webp-title-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      .camera-webp-title {
+        font-size: calc(1.6rem + 3vw);
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

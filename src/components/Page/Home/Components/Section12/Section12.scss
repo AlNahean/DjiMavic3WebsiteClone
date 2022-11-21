@@ -1,0 +1,35 @@
+.section-12 {
+  max-width: 100vw;
+  overflow-x: hidden;
+  .section-12-wrapper {
+    margin-top: 10vh;
+  }
+
+  .sc-12-image-container {
+    width: 100%;
+
+    margin-bottom: 10vh;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      fit-content: cover;
+    }
+  }
+
+  .addition-feature-tile-wrapper {
+    height: 40vh;
+  }
+  .addition-feature-tile {
+    background-size: cover;
+    background-position: center center;
+    border-radius: 1rem;
+
+    .tile-title {
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+    }
+  }
+}

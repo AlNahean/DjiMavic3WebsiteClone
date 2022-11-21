@@ -1,0 +1,18 @@
+:root {
+  --my-color: #fff;
+  --my-color-sc: hsl(0deg 0% 100% / 65%) (145, 162, 240);
+  --my-color-sc-2: #3b3e40(145, 162, 240);
+  --my-color2: #3b3e40;
+  --my-bg-color: rgb(0 0 0);
+  --my-header-bg: rgb(35 37 38 / 90%);
+  --my-header-bg-sc: rgba(65, 68, 70, 0.9);
+
+  --my-gradiant-highlight: linear-gradient(
+    90deg,
+    #d95e00 30%,
+    #ffa353,
+    #d95e00 70%
+  );
+
+  --header-height: 70px;
+}

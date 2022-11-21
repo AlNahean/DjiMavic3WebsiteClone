@@ -1,0 +1,53 @@
+.sc5-hr-scroll {
+  padding-top: var(--header-height);
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  //   background-color: red;
+
+  .sc5-hr-scroll-container {
+    scale: 0.8;
+    width: 200%;
+    height: 100%;
+    // background-color: red;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+
+    & > div {
+      height: 100%;
+      width: 100%;
+    }
+    .sc5-box-active {
+      scale: 1 !important;
+    }
+
+    .hr-scroll-box {
+      transition: all 1.5s;
+      scale: 0.9;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 6fr 1.5fr;
+      grid-gap: 1rem;
+
+      & > div {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .bottom {
+        justify-content: flex-start;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

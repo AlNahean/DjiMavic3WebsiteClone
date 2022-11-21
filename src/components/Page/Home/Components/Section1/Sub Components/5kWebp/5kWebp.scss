@@ -1,0 +1,23 @@
+.section-1-5kwebp-wrapper {
+  .fiveKWebp-title-wrapper {
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .fiveKWebp-title-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      .fiveKWebp-title {
+        font-size: calc(1.6rem + 3vw);
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

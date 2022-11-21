@@ -1,0 +1,125 @@
+//***********************************************************************************************
+//
+// *****************All Navbar after making it fixed amd testing************************************
+//
+// ************************************************************************************************
+
+.dummy-left-nav {
+  position: relative;
+  width: 260px;
+  min-width: 260px;
+  max-height: 70px;
+}
+@media screen and (max-width: 992px) {
+  .dummy-left-nav {
+    width: 0px;
+    min-width: 0px;
+  }
+}
+.fixed-navbar-wrapper {
+  // width: 100vw;
+  // min-width: 100vw;
+  max-height: 70px;
+}
+.left-fixed-nav-wrapper {
+  position: fixed;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.363);
+  // width: 100%;
+  min-height: 100vh;
+  width: 100vw;
+}
+//
+//
+.full-left-nav {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  // left: 0px;
+}
+
+.full-left-nav .card-header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.full-left-nav .card {
+  border: 0px;
+  border-radius: 0px;
+}
+.left-nav-item a {
+  color: var(--ct-color-font);
+}
+.full-left-nav .card-header > img {
+  height: 20px;
+}
+
+.card-section-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  cursor: pointer;
+}
+.collapse-header {
+  font-weight: 600;
+}
+.left-nav-collapse li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+.left-nav-collapse .badge {
+  margin-bottom: 0px;
+}
+// .card-section-grid .badge {
+//   margin-bottom: 0px;
+// }
+.short-left-nav {
+  width: 54px;
+  height: 100vh;
+}
+
+.short-left-nav .card-header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.short-left-nav .card {
+  border: 0px;
+  border-radius: 0px;
+}
+.short-left-nav .card-header > img {
+  height: 30px;
+}
+.short-left-nav .card-body {
+  padding: 0rem !important;
+}
+.short-left-nav .card-body li {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 2rem;
+  // width: auto;
+  border: 1px solid black;
+}
+.short-left-nav .card-body li > .icon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: auto;
+}

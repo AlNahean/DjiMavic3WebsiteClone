@@ -1,0 +1,29 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradiant-bg-clip {
+  background: var(--my-gradiant-highlight);
+  background-clip: text;
+  color: transparent;
+}
+.gradiant-btn {
+  // border: 2px solid var(--my-gradiant-highlight);
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: var(--my-gradiant-highlight);
+
+  border-radius: 1000rem;
+}
+.gradiant-rounded-btn {
+  border: double 3px transparent;
+  background-image: linear-gradient(black, black), var(--my-gradiant-highlight);
+  border-radius: 1rem;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

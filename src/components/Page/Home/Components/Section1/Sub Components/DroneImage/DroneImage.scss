@@ -1,0 +1,24 @@
+.section-1-drone-image-wrapper {
+  overflow: hidden;
+  .drone-image-title-wrapper {
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .drone-image-title-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+
+      .drone-image-title {
+        font-size: calc(1.6rem + 3vw);
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

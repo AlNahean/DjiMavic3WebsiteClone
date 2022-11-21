@@ -1,0 +1,133 @@
+.ecommerse-dashboard {
+  .card-header {
+    // --bs-bg-opacity: 1;
+    // background-color: rgba(
+    //   var(--bs-primary-rgb),
+    //   var(--bs-bg-opacity)
+    // ) !important;
+
+    // color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+    // @extend .bg-primary;
+    // @extend .text-white;
+  }
+}
+
+//styles for react calender
+@import "./_react-calender.scss";
+@import "./_recent-activity.scss";
+
+//
+.page-title-box {
+  color: inherit;
+}
+.page-title {
+  margin-bottom: 0px;
+
+  color: var(--ct-color-font);
+}
+.page-title-input input {
+  //   margin-right: 5rem;
+  color: var(--ct-color-font) !important;
+}
+
+// @media screen and (max-width: 700px) {
+//   .page-title-input {
+//     display: none;
+//   }
+// }
+
+// @media screen and (max-width: 995px) {
+//   .page-title-input {
+//     background-color: red;
+//     display: none !important;
+//   }
+// }
+.page-title-box .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   padding: 0px 5px;
+}
+.page-title-box .icon > * {
+  font-size: 1.5rem;
+}
+
+.calender-input-group {
+  position: relative;
+  z-index: 1000;
+}
+.calender-icon {
+  position: relative;
+}
+.calender-container {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  transform: translate(10px, 105%);
+}
+.overview-wrapper .card {
+  margin-bottom: 24px;
+}
+.overview-card .icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #727cf540;
+  color: #727cf5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.overview-card .icon > * {
+  font-size: 1.4rem;
+}
+
+// revenew
+.weekly-pay {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--ct-body-sc-bg);
+}
+
+// Revenew With Location
+.progress-w-percent {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.progress-w-percent:hover {
+  background-color: var(--ct-body-sc-bg);
+}
+
+.revenew-by-location-h {
+  min-height: 550px;
+}
+.revenew-h {
+  min-height: 550px;
+}
+
+@media screen and (max-width: 990px) {
+  .revenew-by-location-h {
+    min-height: 100%;
+  }
+  .revenew-h {
+    min-height: 100%;
+  }
+}
+
+//top selling products
+
+.hm-top-selling-products .table {
+  color: var(--ct-color-font) !important;
+}
+.hm-top-selling-products .table tr:hover {
+  color: var(--ct-color-font) !important;
+}
+.hm-top-selling-products .table-hover > tbody > tr:hover > * {
+  --bs-table-accent-bg: var(--ct-body-sc-bg);
+  color: var(--ct-color-font) !important;
+}

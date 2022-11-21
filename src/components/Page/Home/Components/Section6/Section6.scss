@@ -1,0 +1,44 @@
+.section-6 {
+  height: 100vh;
+  width: 100%;
+  //   background-color: red;
+  overflow: hidden;
+  .section-6-wrapper {
+    height: 100vh;
+    padding-top: var(--header-height);
+
+    position: relative;
+
+    .section-6-texts {
+      //   background-color: red;
+      margin-top: calc(var(--header-height) * 1.5);
+      min-height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 8;
+      h5 {
+        max-width: 900px;
+        line-height: 2rem;
+      }
+    }
+    .section-6-overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 6;
+    }
+
+    .section-6-image {
+      //   background-color: blue;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

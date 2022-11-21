@@ -1,0 +1,18 @@
+.section-9 {
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-top: var(--header-height);
+  .section-9-wrapper {
+    .section-9-info {
+      width: 100%;
+      max-width: 800px;
+    }
+  }
+  .section-9-drone-image {
+    padding-top: var(--header-height);
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+}

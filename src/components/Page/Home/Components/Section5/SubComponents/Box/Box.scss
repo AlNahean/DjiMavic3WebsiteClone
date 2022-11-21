@@ -1,0 +1,38 @@
+.section-5-box {
+  .active-box {
+    scale: 1 !important;
+  }
+  .section-5-box-container {
+    transition: all 1.5s;
+    scale: 0.8;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 7fr 1fr;
+    // justify-content: center;
+    // align-items: center;
+    grid-gap: 1rem;
+    & > div {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   background-color: green;
+    }
+    .box-image-container {
+      background-size: cover;
+      background-position: center center;
+    }
+    // .box-image {
+    //   height: fit-content;
+    // }
+    .box-image-info {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+  }
+}
