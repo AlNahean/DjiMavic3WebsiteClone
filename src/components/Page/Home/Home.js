@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
+import assetsLoader from "assets-loader";
 import { useGlobalContext } from "../../Context";
 import useSmoothScroll from "../../Hooks/useSmoothScroll";
 import LastSection from "./Components/LastSection/LastSection";
@@ -57,6 +58,8 @@ const loadingInfo = {
   },
 };
 
+var memArray = [];
+
 const Home = () => {
   const videoRef = useRef(null);
 
@@ -69,23 +72,78 @@ const Home = () => {
   //for Scroll Smoothing
   // useSmoothScroll();
 
+  useEffect(() => {
+    // Testing code
+    const fixArray = (arr) => {
+      // first it gets a object with unique values
+      let uniqueObject = new Set(arr);
+
+      //it converts it to an array
+      let uniqueArray = [...uniqueObject];
+
+      //it sorts the array in ascending order
+      let sortedArray = uniqueArray.sort((a, b) => a - b);
+      return sortedArray;
+    };
+
+    let arr = [3, 26, 1, 2, 3, 44, 57, 87, 1];
+    let fixedArr = fixArray(arr);
+    console.log(fixedArr);
+    // result is [1, 2, 3, 26, 44, 57, 87]
+    return () => {};
+  }, []);
+
   const loadCameraImage = async (item) => {
+    // memArray.push()
     console.log(item.type);
     for (let i = 0; i < item.total; i++) {
       let link = item.srcStart + i.toString() + item.ext;
+
+      let cacheSrc = link.split("").slice(2).join("");
+
+      // console.log(link);
+      // console.log(window.location.href + cacheSrc);
       const img = new Image();
       img.src = link;
+      memArray.push({ src: window.location.href + cacheSrc, loaded: false });
       // console.log(img, link);
 
-      img.onload = () => {
+      img.onload = (e) => {
         // console.log("loaded inage", item.type, i);
-        if (item.type === "s9DroneImage" && i === 87) {
-          setLoadingState({ state: "loaded", progress: i });
+        // console.log("aaaa");
+        // setLoadingState({ state: item.type, progress: i });
+        // if (item.type === "s9DroneImage" && i === 87) {
+        //   setLoadingState({ state: "loaded", progress: i });
+        // } else {
+        //   // if (i === 1) {
+        //   setLoadingState({ state: item.type, progress: i });
+        //   // }
+        // }
+        // console.log(e.path[0].currentSrc);
+        // console.log(e);
+        //
+        memArray.map((item) => {
+          // console.log(
+          //   item.src === e.path[0].currentSrc,
+          //   item.src,
+          //   e.path[0].currentSrc
+          // );
+
+          if (item.src === e.path[0].currentSrc) {
+            return { ...item, loaded: true };
+          } else return { ...item };
+        });
+        let a = memArray.filter((item) => item.src !== e.path[0].currentSrc);
+        memArray = a;
+
+        if (memArray.length < 30) {
+          console.log(a.length, memArray.length);
+          setLoadingState({ state: "loaded", progress: 100 });
         } else {
-          // if (i === 1) {
           setLoadingState({ state: item.type, progress: i });
-          // }
         }
+
+        // console.log(memArray.length);
       };
       // console.log(i);
     }
@@ -94,42 +152,102 @@ const Home = () => {
   //   const video = new Video();
   // };
 
+  const getAssets = async () => {
+    await loadCameraImage(loadingInfo.cameraWebp);
+    console.log("Loading image 1");
+    await loadCameraImage(loadingInfo.fiveKWebp);
+    console.log("Loading image 2");
+
+    await loadCameraImage(loadingInfo.droneSensor);
+    console.log("Loading image 3");
+
+    await loadCameraImage(loadingInfo.s2DroneImage);
+    console.log("Loading image 4");
+
+    await loadCameraImage(loadingInfo.s9DroneImage);
+    console.log("Loading image 5");
+
+    // setLoadingState({ state: "loaded", progress: 100 });
+    // console.log("loaded");
+  };
+
   useEffect(() => {
     // videoRef.current.onload(() => {
     //   console.log("aaa");
     // });
-    videoRef.current.addEventListener(
-      "loadeddata",
-      function () {
-        // Video is loaded and can be played
-        console.log("video loaded");
-        alert("aa");
-      },
-      false
-    );
-    loadCameraImage(loadingInfo.cameraWebp);
-    loadCameraImage(loadingInfo.fiveKWebp);
-    loadCameraImage(loadingInfo.droneSensor);
-    loadCameraImage(loadingInfo.s2DroneImage);
-    loadCameraImage(loadingInfo.s9DroneImage);
+    // videoRef.current.addEventListener(
+    //   "loadeddata",
+    //   function () {
+    //     // Video is loaded and can be played
+    //     console.log("video loaded");
+    //     alert("aa");
+    //   },
+    //   falsewww
+    // );
+    // loadCameraImage(loadingInfo.cameraWebp);
+    // loadCameraImage(loadingInfo.fiveKWebp);
+    // loadCameraImage(loadingInfo.droneSensor);
+    // loadCameraImage(loadingInfo.s2DroneImage);
+    // loadCameraImage(loadingInfo.s9DroneImage);
+
+    // getAssets();
 
     return () => {};
   }, []);
 
-  if (loadingState.state !== "loaded") {
-    return (
-      <div>
-        <h1>{loadingState.state}</h1>
-        <h1>{loadingState.progress}</h1>
+  // useLayoutEffect(() => {
+  //   var loader = assetsLoader();
 
-        <video
-          src={loadingInfo.droneVideo.srcStart}
-          // style={{ display: "none" }}
-          ref={videoRef}
-        ></video>
-      </div>
-    );
-  }
+  //   console.log(loader);
+  //   // loader.add("aaaaa.jpg");
+
+  //   loader.start();
+  //   // loader.on("complete", () => {
+  //   //   console.log("a");
+  //   // });
+
+  //   // loader
+  //   //   .add("audio.mp3")
+  //   //   .add("picture.jpg")
+  //   //   .add(["a.png", "b.png"])
+  //   //   .add({
+  //   //     id: "video",
+  //   //     url: "video.webm",
+  //   //   })
+  //   //   .add({
+  //   //     id: "sounds",
+  //   //     assets: [
+  //   //       { id: "a", url: "a.mp3" },
+  //   //       { id: "b", url: "b.mp3" },
+  //   //     ],
+  //   //   })
+  //   //   .on("complete", function (assets) {
+  //   //     console.log(assets);
+  //   //     // console.log(loader.get("video"));
+  //   //     // console.log(loader.get("sounds"));
+  //   //   })
+  //   //   .start();
+
+  //   return () => {
+  //     loader.destroy();
+  //     loader.getLoader("groupId").destroy();
+  //   };
+  // }, []);
+
+  // if (loadingState.state !== "loaded") {
+  //   return (
+  //     <div>
+  //       <h1>{loadingState.state}</h1>
+  //       <h1>{loadingState.progress}</h1>
+
+  //       {/* <video
+  //         src={loadingInfo.droneVideo.srcStart}
+  //         // style={{ display: "none" }}
+  //         ref={videoRef}
+  //       ></video> */}
+  //     </div>
+  //   );
+  // }
 
   return (
     <div>
